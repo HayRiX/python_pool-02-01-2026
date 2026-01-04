@@ -22,33 +22,32 @@ Unlike C (which compiles to machine code), Python is an **interpreted language**
 
 ## 🛠️ Part 2: The Toolkit (Functions & Methods)
 
-### 1. I/O Operations
+### 1. I/O Operations (Advanced)
 * **`print(*objects)`**:
-    * Outputs text to the console.
-    * Adds a newline `\n` automatically.
-    * Separating arguments with a comma adds a space: `print("A", "B")` → `A B`.
+    * Outputs text to the console (adds `\n` automatically).
+    * **`end="..."`**: Changes the character printed at the end.
+        * *Ex:* `print("Hello", end="")` (No newline, cursor stays on same line).
+    * **`sep="..."`**: Changes the separator between multiple arguments.
+        * *Ex:* `print("Day", "1", sep="-")` → `Day-1`.
 * **`input(prompt)`**:
     * Displays a prompt and pauses for user input.
     * ⚠️ **Crucial:** Always returns a **String (`str`)**. Even if the user types `10`, it returns `"10"`.
 
-### 2. Type Conversion (Casting)
-* **`int(value)`**: Converts a string or number to an integer. Essential when processing user input for math.
-    * *Usage:* `age = int(input("Age: "))`
+### 2. Loops & Sequences (Range Mastery)
+* **`range(start, stop, step)`**: Generates a sequence of numbers.
+    * **Basic:** `range(1, 5)` → `1, 2, 3, 4` (Stop is exclusive).
+    * **With Step:** `range(0, 10, 2)` → `0, 2, 4, 6, 8` (Skips by 2).
+    * **Backwards (Negative Step):** `range(5, 0, -1)` → `5, 4, 3, 2, 1`.
+        * *Note:* To count down, `step` must be negative, and `start` must be greater than `stop`.
 
-### 3. Loops & Sequences
-* **`range(start, stop)`**: Generates a sequence of numbers.
-    * **Start:** Inclusive.
-    * **Stop:** Exclusive (The loop stops *before* this number).
-    * *Example:* `range(1, 5)` generates `1, 2, 3, 4`.
-    * *Usage:* `for i in range(1, count + 1):` (to include the last number).
-
-### 4. String Formatting & Methods
+### 3. String Formatting & Methods
 * **f-strings** (Python 3.6+):
     * The modern way to embed expressions inside string literals.
     * *Syntax:* `f"Hello {name}, score is {score}"`.
-* **`.capitalize()`**:
-    * String method that converts the first character to uppercase and the rest to lowercase.
-    * *Usage:* `"tomato".capitalize()` → `"Tomato"`.
+    * **Precision:** `f"Price: {price:.2f}"` → Rounds float to 2 decimal places.
+* **Methods:**
+    * `.capitalize()`: First char to uppercase (`"tomato"` → `"Tomato"`).
+    * `.upper()` / `.lower()`: Converts entire string case.
 
 ---
 
