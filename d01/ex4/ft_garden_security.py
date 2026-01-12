@@ -1,17 +1,27 @@
 #!/usr/bin/env python3
 class SecurePlant:
+    """A class to represent a plant with secure data encapsulation."""
     def __init__(self, name: str) -> None:
+        """
+        Initialize the secure plant with a name and default private attributes.
+        """
         self.name = name
         self.__height = 0
         self.__age = 0
 
     def get_height(self):
+        """Return the current height of the plant."""
         return self.__height
 
     def get_age(self):
+        """Return the current age of the plant."""
         return self.__age
 
     def set_height(self, value: int):
+        """
+        Set the height with validation.
+        Rejects negative values to ensure data integrity.
+        """
         if value < 0:
             print(f"\nInvalid operation attempted: "
                   f"height {value}cm [REJECTED]")
@@ -21,6 +31,10 @@ class SecurePlant:
             print(f"Height updated: {value}cm [OK]")
 
     def set_age(self, value: int):
+        """
+        Set the age with validation.
+        Rejects negative values to ensure data integrity.
+        """
         if value < 0:
             print()
             print(f"Invalid operation attempted: "
