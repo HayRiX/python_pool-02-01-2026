@@ -55,7 +55,7 @@ Unlike C (which compiles to machine code), Python is an **interpreted language**
 
 ### 1. Conditional Statements
 No parentheses `()` required around conditions. Colons `:` are mandatory.
-```python
+```console
 if age > 60:
     print("Ready")
 elif age < 0:
@@ -67,7 +67,7 @@ else:
 ### 2. Iteration (Loops)
 Python uses for ... in ... to iterate over sequences (like range).
 
-```python
+```console
 for i in range(1, 10):
     print(i)
 ```
@@ -75,7 +75,7 @@ for i in range(1, 10):
 ### 3. Recursion (Wrapper Pattern)
 To handle recursion without asking for input multiple times, we use an inner function (wrapper):
 
-```python
+```console
 def ft_recursive_task():
     limit = int(input("Limit: ")) # Input happens once
     
@@ -91,7 +91,7 @@ def ft_recursive_task():
 ### 4. Type Annotations (Hints)
 Introduced in Exercise 7, this brings C-style clarity to Python functions (though it's not enforced by the runtime).
 
-```python
+```console
 #      variable: type      variable: type    return type
 def my_func(name: str,      count: int)    -> None:
     pass
